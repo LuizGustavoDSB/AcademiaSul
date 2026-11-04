@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane styleClass="tela-menu" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.senai.academiasul.HelloController">
+    <left>
+        <VBox alignment="TOP_CENTER" prefHeight="1920.0" prefWidth="1080.0" spacing="28" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="45" left="35" right="35" top="45" />
+            </padding>
+            <ImageView fitHeight="93.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@imagens/laco.png" />
+                </image>
+            </ImageView>
+
+            <Label styleClass="titulo-menu" text="Academia Sul" />
+
+            <Label styleClass="subtitulo-menu" text="Escolha a opção desejada" />
+
+            <GridPane hgap="20" maxWidth="800" vgap="20">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="ALWAYS" percentWidth="50" />
+                    <ColumnConstraints hgrow="ALWAYS" percentWidth="50" />
+                </columnConstraints>
+
+                <VBox onMouseClicked="#abrirAlunos" styleClass="card-menu" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <Label styleClass="card-titulo" text="Cadastro de alunos" />
+                    <Label styleClass="card-descricao" text="Cadastrar e consultar alunos" />
+                </VBox>
+
+                <VBox onMouseClicked="#abrirProfessores" styleClass="card-menu" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <Label styleClass="card-titulo" text="Cadastro de professores" />
+                    <Label styleClass="card-descricao" text="Gerenciar professores" />
+                </VBox>
+
+                <VBox onMouseClicked="#abrirPlanos" styleClass="card-menu" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <Label styleClass="card-titulo" text="Planos" />
+                    <Label styleClass="card-descricao" text="Cadastrar e vincular planos" />
+                </VBox>
+
+                <VBox onMouseClicked="#abrirExercicios" styleClass="card-menu" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <Label styleClass="card-titulo" text="Exercícios" />
+                    <Label styleClass="card-descricao" text="Gerenciar exercícios" />
+                </VBox>
+
+                <VBox onMouseClicked="#abrirTreinos" styleClass="card-menu" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                    <Label styleClass="card-titulo" text="Treinos" />
+                    <Label styleClass="card-descricao" text="Criar e vincular treinos" />
+                </VBox>
+
+                <VBox onMouseClicked="#abrirConsultas" styleClass="card-menu" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <Label styleClass="card-titulo" text="Consultas" />
+                    <Label styleClass="card-descricao" text="Séries, repetições e responsáveis" />
+                </VBox>
+
+                <VBox onMouseClicked="#abrirAssociacaoProfessor" styleClass="card-menu" GridPane.columnIndex="0" GridPane.rowIndex="3">
+
+                    <Label styleClass="card-titulo" text="Professores Responsáveis" />
+
+                    <Label styleClass="card-descricao" text="Associar alunos aos professores" />
+
+                </VBox>
+                <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                </rowConstraints>
+
+            </GridPane>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="card-menu" />
+        </VBox>
+    </left>
+</BorderPane>

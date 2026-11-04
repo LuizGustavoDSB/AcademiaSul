@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="800.0" prefWidth="1400.0" spacing="14" styleClass="tela-cadastro" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.senai.academiasul.ProfessorMaldito">
+
+      <padding><Insets bottom="25" left="35" right="35" top="25" /></padding>
+
+      <Label styleClass="titulo-menu" text="Cadastro de Professores" />
+      <Label styleClass="subtitulo-menu" text="Preencha os dados do professor" />
+
+      <TextField fx:id="campoNomeProfessor" maxWidth="330" promptText="Nome completo" />
+      <TextField fx:id="campoCpfProfessor" maxWidth="330" promptText="CPF" />
+      <TextField fx:id="campoContatoProfessor" maxWidth="330" promptText="Contato" />
+      <TextField fx:id="campoEnderecoProfessor" maxWidth="330" promptText="Endereço" />
+
+      <Button maxWidth="330" onAction="#cadastrarProfessor" text="Cadastrar professor" />
+      <Label fx:id="mensagem" styleClass="mensagem" text="Aguardando preenchimento..." wrapText="true" />
+</VBox>
