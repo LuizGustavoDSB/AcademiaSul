@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 
 <BorderPane styleClass="tela-menu" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.senai.academiasul.HelloController">
-    <left>
+    <center>
         <VBox alignment="TOP_CENTER" prefHeight="1920.0" prefWidth="1080.0" spacing="28" BorderPane.alignment="CENTER">
             <padding>
                 <Insets bottom="45" left="35" right="35" top="45" />
