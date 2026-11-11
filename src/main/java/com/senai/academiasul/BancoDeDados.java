@@ -58,8 +58,7 @@ public class BancoDeDados {
             }
         }
 
-        AssociacaoAlunoProfessor novaAssociacao =
-                new AssociacaoAlunoProfessor(aluno, professor);
+        AssociacaoAlunoProfessor novaAssociacao = new AssociacaoAlunoProfessor(aluno, professor);
 
         associacoesAlunosProfessores.add(novaAssociacao);
     }
@@ -67,15 +66,14 @@ public class BancoDeDados {
     public Professor getProfessorDoAluno(Aluno aluno) {
 
         for (AssociacaoAlunoProfessor associacao : associacoesAlunosProfessores) {
-
             if (associacao.getAluno() == aluno) {
                 return associacao.getProfessor();
             }
+            
         }
-
         return null;
     }
-
+    
     public List<AssociacaoAlunoProfessor> getAssociacoesAlunosProfessores() {
         return associacoesAlunosProfessores;
     }
@@ -98,13 +96,11 @@ public class BancoDeDados {
             }
         }
 
-        AssociacaoAlunoTreinos novaAssociacao =
-                new AssociacaoAlunoTreinos(aluno);
+        AssociacaoAlunoTreinos novaAssociacao = new AssociacaoAlunoTreinos(aluno);
 
         novaAssociacao.adicionarTreino(treino);
         associacoes.add(novaAssociacao);
     }
 
     private final List<AssociacaoAlunoProfessor> associacoesAlunosProfessores = new ArrayList<>();
-
 }
