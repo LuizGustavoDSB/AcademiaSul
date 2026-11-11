@@ -212,8 +212,7 @@ public class TelaConsultas {
         } else {
 
             exibir("Professor responsável",
-
-                    "Nome: " + professor.getNome() +
+                            "Nome: " + professor.getNome() +
                             "\nContato: " + professor.getContato() +
                             "\nCPF: " + professor.getCpf() +
                             "\nEndereço: " + professor.getEndereco()
@@ -241,12 +240,9 @@ public class TelaConsultas {
         }
 
         String texto = associacao.getTreinos().stream()
-
-                .map(t -> "• " + t.getTipo() + " — " + formatarValor(t.getValor()))
-
-                .collect(Collectors.joining("\n"));
-
-        exibir("Treinos do aluno", texto);
+                 .map(t -> "• " + t.getTipo() + " — " + formatarValor(t.getValor()))
+                 .collect(Collectors.joining("\n"));
+                  exibir("Treinos do aluno", texto);
     }
 
     private void mostrarPlano() {
