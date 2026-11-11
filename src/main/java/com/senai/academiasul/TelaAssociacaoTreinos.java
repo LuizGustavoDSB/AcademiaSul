@@ -27,6 +27,7 @@ public class TelaAssociacaoTreinos {
         comboAlunos.setItems(
                 FXCollections.observableArrayList(banco.getAlunos())
         );
+        
         comboAlunos.setPromptText("Escolha um aluno");
         comboAlunos.setMaxWidth(Double.MAX_VALUE);
 
@@ -98,7 +99,7 @@ public class TelaAssociacaoTreinos {
     private void mostrarAlerta(
             Alert.AlertType tipo,
             String mensagem
-    ) {
+    ){
         Alert alerta = new Alert(tipo);
         alerta.setTitle("Associação de Treinos");
         alerta.setHeaderText(null);
