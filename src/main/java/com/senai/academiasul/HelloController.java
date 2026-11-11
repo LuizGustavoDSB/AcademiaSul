@@ -1,4 +1,3 @@
-
 package com.senai.academiasul;
 
 import javafx.fxml.FXML;
@@ -7,7 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
 
@@ -18,14 +16,11 @@ public class HelloController {
         abrirJanela("cadastro-aluno.fxml", "Cadastro de Alunos");
     }
 
-
-
     @FXML
     private void abrirProfessores() {
         abrirJanela(
                 "/com/senai/academiasul/cadastrar-professor-maldito.fxml",
-                "Cadastro de Professores"
-        );
+                "Cadastro de Professores");
     }
 
     @FXML
@@ -51,7 +46,6 @@ public class HelloController {
     private void abrirJanela(String arquivo, String titulo) {
         try {
             URL recurso = getClass().getResource(arquivo);
-
             if (recurso == null) {
                 throw new IOException(
                         "Arquivo FXML não encontrado: " + arquivo
@@ -85,7 +79,6 @@ public class HelloController {
 
             alerta.setContentText(e.getMessage());
             alerta.showAndWait();
-
             e.printStackTrace();
         }
     }
@@ -99,5 +92,4 @@ public class HelloController {
     private void abrirConsultas() {
         new TelaConsultas().abrirTela();
     }
-
 }
