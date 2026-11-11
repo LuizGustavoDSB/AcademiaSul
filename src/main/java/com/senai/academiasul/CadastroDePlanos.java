@@ -28,12 +28,14 @@ public class CadastroDePlanos {
                 mostrarAlerta(Alert.AlertType.WARNING, "Preencha o tipo e o valor do plano.");
                 return;
             }
+            
             try {
                 double valor = Double.parseDouble(textoValor.replace(",", "."));
                 if (valor <= 0) {
                     mostrarAlerta(Alert.AlertType.WARNING, "O valor precisa ser maior que zero.");
                     return;
                 }
+                
                 BancoDeDados.getInstance().adicionarPlano(new Plano(tipo, valor));
                 mostrarAlerta(Alert.AlertType.INFORMATION, "Plano cadastrado: " + tipo + " - R$ " + String.format(java.util.Locale.forLanguageTag("pt-BR"), "%.2f", valor));stage.close();
             } catch (NumberFormatException ex) {
