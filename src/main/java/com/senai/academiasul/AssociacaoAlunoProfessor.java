@@ -1,4 +1,3 @@
-
 package com.senai.academiasul;
 
 public class AssociacaoAlunoProfessor {
