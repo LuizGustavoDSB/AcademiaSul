@@ -29,8 +29,8 @@ public class CadastroAlunoController {
             return;
         }
 
-        boolean matriculaExiste = BancoDeDados.getInstance().getAlunos().stream()
-                .anyMatch(a -> a.getMatricula().equalsIgnoreCase(matricula));
+        boolean matriculaExiste = BancoDeDados.getInstance().getAlunos().stream().anyMatch(a -> a.getMatricula().equalsIgnoreCase(matricula));
+        
         if (matriculaExiste) {
             mensagem.setText("Já existe um aluno com essa matrícula.");
             return;
