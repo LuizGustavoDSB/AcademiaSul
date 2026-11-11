@@ -1,4 +1,3 @@
-
 package com.senai.academiasul;
 
 import javafx.collections.FXCollections;
@@ -40,6 +39,7 @@ public class TelaAssociacaoProfessor {
         comboProfessores.setItems(
                 FXCollections.observableArrayList(banco.getProfessores())
         );
+        
         comboProfessores.setPromptText("Escolha um professor");
         comboProfessores.setMaxWidth(Double.MAX_VALUE);
         comboProfessores.getStyleClass().add("campo-associacao");
@@ -59,7 +59,7 @@ public class TelaAssociacaoProfessor {
                 );
                 return;
             }
-
+            
             banco.associarProfessor(aluno, professor);
 
             mostrarAlerta(
@@ -97,7 +97,7 @@ public class TelaAssociacaoProfessor {
     private void mostrarAlerta(
             Alert.AlertType tipo,
             String mensagem
-    ) {
+    ){
         Alert alerta = new Alert(tipo);
         alerta.setTitle("Associação de Professor");
         alerta.setHeaderText(null);
